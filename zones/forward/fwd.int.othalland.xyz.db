@@ -1,0 +1,37 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     r002.int.othalland.xyz. root.int.othalland.xyz. (
+                             20         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+;@      IN      NS      localhost.
+;@      IN      A       127.0.0.1
+;@      IN      AAAA    ::1
+
+;Name Server Information
+       IN      NS      r002.int.othalland.xyz.
+       ;IN      NS      ns2.itzgeek.local.
+;IP address of Name Server
+r002     IN      A       192.168.1.111
+; ns2     IN      A       192.168.1.20
+
+;Mail Exchanger
+;othalland.local.   IN     MX   10   mail.itzgeek.local.
+
+;A - Record HostName To Ip Address
+r001 	IN      A      192.168.1.110
+rctn001 IN    	A      192.168.1.120
+rctn002 IN    	A      192.168.1.121
+rctn003 IN    	A      192.168.1.122
+rctn004 IN    	A      192.168.1.123
+rctn005 IN    	A      192.168.1.124
+othanas IN      A      192.168.1.191
+;CNAME record
+nas	IN      CNAME   othanas.int.othalland.xyz.
+ppm	IN      CNAME   rctn002.int.othalland.xyz.
+mdn	IN      CNAME   r002.int.othalland.xyz.

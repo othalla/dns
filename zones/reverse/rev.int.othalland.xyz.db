@@ -1,0 +1,24 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     int.othalland.xyz. root.int.othalland.xyz. (
+                             20         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+;@      IN      NS      localhost.
+;1.0.0  IN      PTR     localhost.
+
+;Name Server Information
+       IN      NS     r002.int.othalland.xyz.
+;       IN      NS     ns2.othalland.local.
+;Reverse lookup for Name Server
+;111      IN      PTR    ns1.othalland.local.
+;20      IN      PTR    ns2.othalland.local.
+;PTR Record IP address to HostName
+110     IN      PTR    r001.int.othalland.xyz.
+111     IN      PTR    r002.int.othalland.xyz.
+191     IN      PTR    othanas.int.othalland.xyz.
